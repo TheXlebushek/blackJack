@@ -95,3 +95,62 @@ button {
 .placeholder {
     background-image: url('./resources/facedown.png');
 }
+
+#mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #008000;
+    color: whitesmoke;
+    font-family: 'Comfortaa', cursive;
+    font-size: 5vmin;
+    padding: 3vmin;
+    border-top-right-radius: 3vmin;
+    position: absolute;
+    width: 50vmin;
+    bottom: 0;
+}
+
+#hide {
+    position: absolute;
+    top: 1vmin;
+    right: 1vmin;
+    height: 3vmin;
+    width: 3vmin;
+}
+
+#hide::before {
+    right: 1vmin;
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    height: 3vmin;
+    width: 0.5vmin;
+    rotate: 45deg;
+    border-radius: 1vmin;
+    -webkit-border-radius: 1vmin;
+    -moz-border-radius: 1vmin;
+    -ms-border-radius: 1vmin;
+    -o-border-radius: 1vmin;
+}
+
+#hide::after {
+    left: 1.5vmin;
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    height: 3vmin;
+    width: 0.5vmin;
+    rotate: -45deg;
+    border-radius: 1vmin;
+    -webkit-border-radius: 1vmin;
+    -moz-border-radius: 1vmin;
+    -ms-border-radius: 1vmin;
+    -o-border-radius: 1vmin;
+}
+
+@media (orientation: landscape) {
+    #mobile {
+        display: none;
+    }
+}

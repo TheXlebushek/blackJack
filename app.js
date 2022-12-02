@@ -83,7 +83,7 @@ qSel('#hit').onclick = async () => {
             [{ transform: 'translateX(50%)' }, { transform: 'translateX(0)' }],
             {
                 duration: 250,
-                direction: 'alternate',
+                fill: 'forwards',
                 easing: 'ease-out',
             }
         );
@@ -92,7 +92,7 @@ qSel('#hit').onclick = async () => {
         [{ transform: 'translateX(-50%)' }, { transform: 'translateX(0)' }],
         {
             duration: 250,
-            direction: 'alternate',
+            fill: 'forwards',
             easing: 'ease-out',
         }
     );
@@ -112,7 +112,7 @@ qSel('#stand').onclick = async () => {
         [{ transform: 'translateX(0)' }, { transform: 'translateX(-100%)' }],
         {
             duration: 250,
-            direction: 'alternate',
+            fill: 'forwards',
             easing: 'ease-out',
         }
     );
@@ -124,7 +124,7 @@ qSel('#stand').onclick = async () => {
         [{ transform: 'translateX(-100%)' }, { transform: 'translateX(0)' }],
         {
             duration: 250,
-            direction: 'alternate',
+            fill: 'forwards',
             easing: 'ease-out',
         }
     );
@@ -146,7 +146,7 @@ qSel('#stand').onclick = async () => {
                 ],
                 {
                     duration: 500,
-                    direction: 'alternate',
+                    fill: 'forwards',
                     easing: 'ease-out',
                 }
             );
@@ -155,7 +155,7 @@ qSel('#stand').onclick = async () => {
             [{ transform: 'translateX(-50%)' }, { transform: 'translateX(0)' }],
             {
                 duration: 500,
-                direction: 'alternate',
+                fill: 'forwards',
                 easing: 'ease-out',
             }
         );
@@ -178,6 +178,14 @@ document.addEventListener('keyup', (e) => {
         return;
     }
 });
+
+qSel('#hide').onclick = () => {
+    qSel('#mobile').animate([{ transform: 'translateX(-100%)' }], {
+        duration: 500,
+        easing: 'ease-out',
+        fill: 'forwards',
+    });
+};
 
 (async () => {
     let score = localStorage.getItem('score');
