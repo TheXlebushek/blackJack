@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: transparent;
+}
+
+.card {
+    aspect-ratio: 226 / 314;
+    height: 20vh;
+    background-size: cover;
+    border-radius: 4%;
+    -webkit-border-radius: 4%;
+    -moz-border-radius: 4%;
+    -ms-border-radius: 4%;
+    -o-border-radius: 4%;
+    box-shadow: 0.5vh 0.3vh 1vh black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+            90deg,
+            #00000015,
+            transparent,
+            transparent,
+            #00000015
+        ),
+        linear-gradient(#00000015, transparent, transparent, #00000015);
+    background-color: #006000;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.hand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    flex-wrap: wrap;
+    margin: 0 10vw;
+    flex: 1;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    margin: 5vh;
+}
+
+button {
+    box-shadow: 0.3vh 0.1vh 1vh black;
+    padding: 1vh 2vh;
+    font-size: 3vh;
+    font-family: 'Comfortaa', cursive;
+    border-radius: 2vh;
+    -webkit-border-radius: 2vh;
+    -moz-border-radius: 2vh;
+    -ms-border-radius: 2vh;
+    -o-border-radius: 2vh;
+}
+
+#dealerScore,
+#playerScore,
+#status,
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 5vh;
+    font-family: 'Comfortaa', cursive;
+    text-shadow: 0.3vh 0.2vh 0.5vh black;
+}
+
+#dealer {
+    margin-top: 10vh;
+}
+
+#player {
+    margin-bottom: 10vh;
+}
+
+.placeholder {
+    background-image: url('./resources/facedown.png');
+}
